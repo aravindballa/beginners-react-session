@@ -18,6 +18,15 @@ import {
 
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
+import preloader from "spectacle/lib/utils/preloader";
+
+const images = {
+  city: require("../assets/city.jpg"),
+  back1: require("../assets/back1.jpg"),
+  cover: require("../assets/cover.jpg")
+};
+
+preloader(images);
 
 // Require CSS
 require("normalize.css");
@@ -51,11 +60,11 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
 
-        <Slide transition={["fade"]} bgColor="tertiary">
+        <Slide transition={["fade"]} bgImage={images.back1} bgDarken="0.4">
           <Heading size={6} textColor="primary" caps>Agenda</Heading>
-          <Text size={6} textColor="secondary">Why React?</Text>
-          <Text size={6} textColor="secondary">Some basics of React</Text>
-          <Text size={6} textColor="secondary">Let's code an app!</Text>
+          <Text size={6} textColor="tertiary">Why React?</Text>
+          <Text size={6} textColor="tertiary">Some basics of React</Text>
+          <Text size={6} textColor="tertiary">Let's code an app!</Text>
         </Slide>
         
         <Slide transition={["fade"]} bgColor="quarternary">
@@ -99,30 +108,10 @@ export default class Presentation extends React.Component {
           <Image src={"https://media.discordapp.net/attachments/384947522218622977/391216116107575306/image.png"}/>
         </Slide>
 
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>Agenda</Heading>
-          <Heading size={1} textColor="secondary">Heading 1</Heading>
-          <Heading size={2} textColor="secondary">Heading 2</Heading>
-          <Heading size={3} textColor="secondary">Heading 3</Heading>
-          <Heading size={4} textColor="secondary">Heading 4</Heading>
-          <Heading size={5} textColor="secondary">Heading 5</Heading>
-          <Text size={6} textColor="secondary">Standard text</Text>
-        </Slide>
-
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>Standard List</Heading>
-          <List>
-            <ListItem>Item 1</ListItem>
-            <ListItem>Item 2</ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
-          </List>
-        </Slide>
-
-        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+        <Slide transition={["fade"]} bgDarken="0.7" bgImage="https://pi.tedcdn.com/r/pe.tedcdn.com/images/ted/d560e7d7d695293217875d2db6fbb35b31fc1991_2880x1620.jpg?w=1200" textColor="primary">
           <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite>Author</Cite>
+            <Quote>Talk is cheap. Show me the code!</Quote>
+            <Cite>Linus Torvalds</Cite>
           </BlockQuote>
         </Slide>
 
