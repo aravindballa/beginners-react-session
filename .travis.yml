@@ -1,0 +1,18 @@
+# back to language cpp to try to bypass osx node failure
+---
+language: node_js
+node_js:
+  - 7
+cache:
+  directories:
+  - node_modules
+# script needed to test, because defaults don't work on osx
+script:
+  - npm run build
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  on:
+branch: master

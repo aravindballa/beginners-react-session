@@ -1,6 +1,6 @@
 {
-  "name": "spectacle-boilerplate",
-  "version": "1.0.1",
+  "name": "beginners-react-session",
+  "version": "1.0.0",
   "description": "ReactJS Powered Presentation Framework",
   "main": "lib/index.js",
   "scripts": {
